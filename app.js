@@ -8,7 +8,8 @@ const downloadQrCode = document.querySelector('.instruction-text');
 
 // Generate qr code
 function generateQRCode() {
-  if (input.value) {
+  let website = input.value;
+  if (website) {
     let qrcodeContainer = qrCode;
     qrcodeContainer.innerHTML = '';
     new QRCode(qrcodeContainer, {
