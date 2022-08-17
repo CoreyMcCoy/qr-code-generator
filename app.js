@@ -8,42 +8,42 @@ const downloadQrCode = document.querySelector('.instruction-text');
 
 // Generate qr code
 function generateQRCode() {
-  let website = input.value;
-  if (website) {
-    let qrcodeContainer = qrCode;
-    qrcodeContainer.innerHTML = '';
-    new QRCode(qrcodeContainer, {
-      text: website,
-      width: 200,
-      height: 200,
-      colorDark: qrColor.value,
-      colorLight: 'rgba(255,255,255,0)',
-      correctLevel: QRCode.CorrectLevel.H,
-    });
-    qrCodeContainer.style.display = 'block';
-  } else {
-    alert('Please enter a valid URL');
-  }
+    let website = input.value;
+    if (website) {
+        let qrcodeContainer = qrCode;
+        qrcodeContainer.innerHTML = '';
+        new QRCode(qrcodeContainer, {
+            text: website,
+            width: 150,
+            height: 150,
+            colorDark: qrColor.value,
+            colorLight: 'rgba(255,255,255,0)',
+            correctLevel: QRCode.CorrectLevel.H,
+        });
+        qrCodeContainer.style.display = 'block';
+    } else {
+        alert('Please enter a valid URL');
+    }
 }
 // download qr code
 downloadQrCode.addEventListener('click', () => {
-  if (!input.value) {
-    alert('Please enter a valid URL');
-  } else {
-    let downloadLink = document.createElement('a');
-    downloadLink.href = document.querySelector('#qrcode-container canvas').toDataURL();
-    downloadLink.download = 'qrcode.png';
-    downloadLink.click();
-  }
+    if (!input.value) {
+        alert('Please enter a valid URL');
+    } else {
+        let downloadLink = document.createElement('a');
+        downloadLink.href = document.querySelector('#qrcode-container canvas').toDataURL();
+        downloadLink.download = 'qrcode.png';
+        downloadLink.click();
+    }
 });
 
 // Reload the page
 function reset() {
-  if (!input.value) {
-    alert('Please enter a valid URL');
-  } else {
-    location.reload();
-  }
+    if (!input.value) {
+        alert('Please enter a valid URL');
+    } else {
+        location.reload();
+    }
 }
 
 resetBtn.addEventListener('click', reset);

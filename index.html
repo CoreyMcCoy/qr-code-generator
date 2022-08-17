@@ -33,75 +33,34 @@
         <!-- End Google Tag Manager (noscript) -->
         <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js" defer></script>
 
+        <nav class="navbar navbar-dark bg-danger">
+            <div class="container-lg">
+                <span class="navbar-brand mb-0 h1">Simple QRCode</span>
+            </div>
+        </nav>
         <div class="container-lg">
             <div class="container">
-                <section>
-                    <div class="header">
-                        <h1 class="display-5 fw-bold text-white pb-2">Create Your QR Code For Free</h1>
-                        <h2 class="fs-4 fw-normal">A simple QR code generator for creating static QR codes.</h2>
-                        <a href="#qrcode-section" class="btn btn-light mt-4">Create a QR Code</a>
+                <section id="header-section">
+                    <div class="header mb-5">
+                        <h1 class="display-5 text-dark pb-2">Create a static QR Code for free.</h1>
+                        <p class="fw-normal">Use this simple QR code generator to create static QR codes for any reason.</p>
                     </div>
-                </section>
-
-                <section>
-                    <div class="row">
-                        <div class="col-md-6 mb-3 pe-lg-4">
-                            <h2 class="h3 pb-2">What is a QR Code?</h2>
-                            <p>
-                                <a href="https://en.wikipedia.org/wiki/QR_code">QR code</a> is short for 'quick response' code, and is a two-dimensional code that can encrypt
-                                thousands of characters. It could, for example, store product information or link to a destination URL.
-                            </p>
-                            <p>
-                                The first QR code system was developed in 1994 by <a href="https://en.wikipedia.org/wiki/Denso#Denso_Wave">Denso Wave</a>, a Toyota subsidiary in
-                                Japan. During the manufacturing process, they needed a more precise way to track cars and parts. They accomplished this by creating a barcode that
-                                could encode kanji, kana, and alphanumeric characters.
-                            </p>
-                        </div>
-                        <div class="col-md-6 mb-3 pe-lg-4">
-                            <h2 class="h3 pb-2">How do QR Codes Work?</h2>
-                            <p>
-                                QR codes have patterns that represent binary codes that can be decoded to reveal data. The three large squares outside the QR code let a QR reader
-                                identify it as a standard QR code.
-                            </p>
-                            <p>
-                                The QR code is then broken down into a grid and analyzed by the QR reader. It examines each grid square individually and assigns a value to each one
-                                based on whether it is black or white. The grid squares are then combined to form larger patterns.
-                            </p>
-                        </div>
-                        <div class="col-md-6 mb-3 ps-lg-4">
-                            <h2 class="h3 pb-2">What can I do with a QR Code?</h2>
-                            <p>
-                                You can use them to collect feedback on your products or services, increase client engagement through images or videos, and even advertise your
-                                brand through events and coupons. All of this can be accomplished with just one scan!
-                            </p>
-                        </div>
-                        <div class="col-md-6 mb-3 pe-lg-4">
-                            <h2 class="h3 pb-2">How do I use a QR Code?</h2>
-                            <p>
-                                You may already have a built-in QR Code reader or scanner on your device. Open your mobile phone's camera app and hold it over a Code for a few
-                                seconds until a notice appears. Check your options to see if QR Code scanning is enabled if this doesn't work.
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="qrcode-section">
                     <div class="row">
                         <div class="col-lg-8 col-sm-12 mb-3">
-                            <h3 class="display-6 fw-bold text-white pb-2">Create Your QR Code</h3>
                             <form>
-                                <div class="mb-4 form pe-md-4">
-                                    <label for="website" class="fs-4 fw-normal form-label website-label">Enter a Valid URL (required)</label>
+                                <div class="mb-5 form pe-md-4">
+                                    <label for="website" class="form-label website-label">1. Enter a Valid URL (required)</label>
                                     <input class="form-control mb-2" type="url" id="website" name="website" placeholder="Must begin with http:// or https://" required />
                                 </div>
 
-                                <div class="mb-4">
-                                    <label for="qrcode-color" class="fs-4 fw-normal mb-2 qrcode-color-label">Pick a color (optional)</label>
+                                <div class="mb-5">
+                                    <label for="qrcode-color" class="mb-2 qrcode-color-label">2. Pick a color (optional)</label>
                                     <input class="form-control form-control-color" type="color" id="qrcode-color" name="qrcode-color" />
                                 </div>
 
-                                <div class="d-grid d-md-block gap-2 mt-5">
-                                    <button class="btn btn-light" type="button" id="button">Get Your QR Code</button>
+                                <label for="button" class="mb-2 qrcode-button-label">2. Generate your QRCode (optional)</label>
+                                <div class="d-grid d-md-block gap-3">
+                                    <button class="btn btn-dark" type="button" id="button">Get Your QR Code</button>
                                     <button class="btn btn-danger" type="button" id="reset-button">Reset</button>
                                 </div>
                             </form>
@@ -116,12 +75,55 @@
                         </div>
                     </div>
                 </section>
+
+                <section id="information-section">
+                    <div class="row">
+                        <div class="col-md-6 mb-3 pe-lg-4">
+                            <h2 class="pb-2">What is a QR Code?</h2>
+                            <p>
+                                <a href="https://en.wikipedia.org/wiki/QR_code">QR code</a> is short for 'quick response' code, and is a two-dimensional code that can encrypt
+                                thousands of characters. It could, for example, store product information or link to a destination URL.
+                            </p>
+                            <p>
+                                The first QR code system was developed in 1994 by <a href="https://en.wikipedia.org/wiki/Denso#Denso_Wave">Denso Wave</a>, a Toyota subsidiary in
+                                Japan. During the manufacturing process, they needed a more precise way to track cars and parts. They accomplished this by creating a barcode that
+                                could encode kanji, kana, and alphanumeric characters.
+                            </p>
+                        </div>
+                        <div class="col-md-6 mb-3 pe-lg-4">
+                            <h2 class="pb-2">How do QR Codes Work?</h2>
+                            <p>
+                                QR codes have patterns that represent binary codes that can be decoded to reveal data. The three large squares outside the QR code let a QR reader
+                                identify it as a standard QR code.
+                            </p>
+                            <p>
+                                The QR code is then broken down into a grid and analyzed by the QR reader. It examines each grid square individually and assigns a value to each one
+                                based on whether it is black or white. The grid squares are then combined to form larger patterns.
+                            </p>
+                        </div>
+                        <div class="col-md-6 mb-3 ps-lg-4">
+                            <h2 class="pb-2">What can I do with a QR Code?</h2>
+                            <p>
+                                You can use them to collect feedback on your products or services, increase client engagement through images or videos, and even advertise your
+                                brand through events and coupons. All of this can be accomplished with just one scan!
+                            </p>
+                        </div>
+                        <div class="col-md-6 mb-3 pe-lg-4">
+                            <h2 class="pb-2">How do I use a QR Code?</h2>
+                            <p>
+                                You may already have a built-in QR Code reader or scanner on your device. Open your mobile phone's camera app and hold it over a Code for a few
+                                seconds until a notice appears. Check your options to see if QR Code scanning is enabled if this doesn't work.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
                 <!-- Footer -->
                 <div class="container border-2 border-top mt-5">
-                    <footer class="pt-3">
+                    <footer class="p-3">
                         <p class="text-center text-muted">
                             Developed with
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewbox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
                             </svg>
                             by
@@ -129,6 +131,7 @@
                         </p>
                     </footer>
                 </div>
+                <!-- Footer end -->
             </div>
         </div>
         <script src="./app.js"></script>
